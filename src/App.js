@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'
+import Header from './header';
+import Home from './home';
+import Watchlist from './watchlist';
+import Details from './details';
+import {BrowserRouter, HashRouter, Routes, Route, UseParams} from 'react-router-dom'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+     
+            <div>
+
+                <HashRouter>
+                    <Header/>
+                    <Routes>
+                        <Route exact="exact" path='/' element={<Home/>}></Route>
+                        <Route exact="exact" path='/watchlist' element={<Watchlist/>}></Route>
+                        <Route exact="exact" path='/details' element={<Details/>}></Route>
+
+                    </Routes>
+                </HashRouter>
+
+            </div>
+     
+
+    );
 }
 
 export default App;

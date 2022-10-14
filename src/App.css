@@ -1,3 +1,10 @@
+:root {
+  --primary: #03273fb9;
+  --secondary: #21d07a;
+  --white: #fff;
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +42,180 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+header {
+  background-color: var(--primary);
+  
+}
+
+header .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  opacity: 0.7;
+ 
+}
+
+header .brand a {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+
+ul.nav-List {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+ ul li{
+    padding-right: 10px;
+    list-style: none;
+ }
+ .card{
+  float: left;
+  margin: 1%;
+ width: 350px;
+height: 100%;
+border: 2px solid var(--secondary);  
+padding: 10px 20px;
+color: white;
+}
+
+span{
+  font-size: 12px;
+}
+.card-title{
+  font-family: 'Freckle Face', cursive;
+  text-align: center;
+  border-bottom: 1px solid;
+  color: yellow;
+  font-size: 30px;
+  
+}
+.card-body{
+  padding: 20px 0px;
+  line-height: 2;
+  font-size: 20px;
+ 
+
+}
+
+.card-body span{
+  font-size: 16px;
+  color: #21d07a;
+
+}
+
+.box{
+  padding: 0px 100px;
+}
+
+
+.container {
+  position: relative;
+  
+  width: 100%;
+  
+}
+
+.card .overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+ 
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card .container:hover .overlay {
+  opacity: 1;
+height: 30%;
+}
+.flx{
+  display: flex;
+}
+
+.box{
+  padding: 20px 30px;
+}
+
+@media (min-width: 400px) and (max-width:768px) {
+
+  
+  header{
+    width: 100%;
+  }
+  
+  Input{
+    display: block;
+  }
+  
+  .card{
+    float: left;
+    margin: 2%;
+   width:300px;
+
+  border: 2px solid var(--secondary);  
+  padding: 10px   0px;
+  color: white;
+  }
+ 
+}
+
+
+ 
+@media (min-width: 768px) and (max-width:1444px) {
+
+  
+  header{
+    width: 100%;
+  }
+
+  .card{
+    float: left;
+    margin: 1%;
+   width: 270px;
+  height: 100%;
+  border: 2px solid var(--secondary);  
+  padding: 10px 20px;
+  color: white;
+  }
+ 
 }
